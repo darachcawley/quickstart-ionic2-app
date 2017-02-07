@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Page Two</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <!--<ion-avatar item-left>-->
+        <!--<img src="{{item.picture.thumbnail}}">-->
+      <!--</ion-avatar>-->
+      <h2>{{item.id}}</h2>
+      <p>{{item.severity}}</p>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.id}}</b>
+  </div>
+
+  <ion-fab top right>
+    <button ion-fab>
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
